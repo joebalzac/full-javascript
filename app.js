@@ -43,15 +43,21 @@
 
 // BONUS 2 
 
-const dolphinsAverageScore = (97 + 112 + 101) / 3;
-const koalasAverageScore = (109 + 95 + 106) / 3;
+// const dolphinsAverageScore = (97 + 112 + 101) / 3;
+// const koalasAverageScore = (109 + 95 + 106) / 3;
 
-if (dolphinsAverageScore  > koalasAverageScore && dolphinsAverageScore >= 100) {
-    console.log("Dolphins are the winner of the game! 🏆");
-} else if (dolphinsAverageScore < koalasAverageScore && koalasAverageScore >= 100) {
-    console.log("Koalas are the winner of the game! 🏆");
-} else if (dolphinsAverageScore === koalasAverageScore){
-console.log("There is a draw");
-} else {
-    console.log("No one wins the trophy, losers!")
-}
+// if (dolphinsAverageScore  > koalasAverageScore && dolphinsAverageScore >= 100) {
+//     console.log("Dolphins are the winner of the game! 🏆");
+// } else if (dolphinsAverageScore < koalasAverageScore && koalasAverageScore >= 100) {
+//     console.log("Koalas are the winner of the game! 🏆");
+// } else if (dolphinsAverageScore === koalasAverageScore){
+// console.log("There is a draw");
+// } else {
+//     console.log("No one wins the trophy, losers!")
+// }
+ 
+const bill = 450
+const tip = bill <= 300 && bill <= 50 ? bill * 0.15 : bill * 0.20
+
+console.log(`The bill total was ${bill}, so we left a tip of ${tip},
+the total spent for the night was ${bill + tip}`)
