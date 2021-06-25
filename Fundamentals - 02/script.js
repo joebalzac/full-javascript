@@ -45,29 +45,44 @@
 // console.log(newyorkSmoothie)
 
 
-//Function declaration
-function calcAge1(birthYear) {
-    return 2037 - birthYear
+// //Function declaration
+// function calcAge1(birthYear) {
+//     return 2037 - birthYear
+// }
+// const age1 = calcAge1(1985)
+
+// //Function expression
+// const calcAge2 = function(birthYear){
+//     return 2037 - birthYear
+// }
+// const age2 = calcAge2(1985)
+// console.log(age1, age2)
+
+// //Arrow Function 
+// const calcAge3 = birthYear => 2037 - birthYear
+// const age3 = calcAge3(1985)
+// console.log(age3)
+
+// const yearsUntilRetirment = (birthYear, firstName) => {
+//     const age = 2037 - birthYear
+//     const retirement = 65 - age
+//     return `${firstName} retires in ${retirement} years`
+// }
+
+// console.log(yearsUntilRetirment(1985, 'Joe'))
+// console.log(yearsUntilRetirment(1991, 'Bob'))
+
+
+function cutPieces(fruit) {
+    return fruit * 4
 }
-const age1 = calcAge1(1985)
 
-//Function expression
-const calcAge2 = function(birthYear){
-    return 2037 - birthYear
-}
-const age2 = calcAge2(1985)
-console.log(age1, age2)
+function fruitProcessor(apples, oranges) {
+    const applePieces = cutPieces(apples)
+    const orangePieces = cutPieces(oranges)
 
-//Arrow Function 
-const calcAge3 = birthYear => 2037 - birthYear
-const age3 = calcAge3(1985)
-console.log(age3)
-
-const yearsUntilRetirment = (birthYear, firstName) => {
-    const age = 2037 - birthYear
-    const retirement = 65 - age
-    return `${firstName} retires in ${retirement} years`
+    const juice = `Juice with ${applePieces} pieces apples and ${orangePieces} pieces oranges`
+    return juice
 }
 
-console.log(yearsUntilRetirment(1985, 'Joe'))
-console.log(yearsUntilRetirment(1991, 'Bob'))
+console.log(fruitProcessor(2, 3))
