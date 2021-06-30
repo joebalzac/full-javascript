@@ -94,7 +94,7 @@
 // const yearsUntilRetirment =  function (birthYear, firstName)  {
 //     const age = calcAge(birthYear)
 //     const retirement = 65 - age
-    
+
 //     if(retirement > 0){
 //         console.log(`${firstName} retires in ${retirement} years`)
 //         return retirement;
@@ -144,36 +144,66 @@
 // console.log(ages)
 
 //Add elements
-const friends = ['Michael', 'Steven', 'Peter']
-const newLength = friends.push('Jay')
-console.log(friends)
-console.log(newLength)
+// const friends = ['Michael', 'Steven', 'Peter']
+// const newLength = friends.push('Jay')
+// console.log(friends)
+// console.log(newLength)
 
 
 
-friends.unshift('John', 'Bobby')
-console.log(friends)
+// friends.unshift('John', 'Bobby')
+// console.log(friends)
 
-//Remove elements 
-friends.pop() //last element
-const popped = friends.pop() 
-console.log(popped)
-console.log(friends)
+// //Remove elements 
+// friends.pop() //last element
+// const popped = friends.pop()
+// console.log(popped)
+// console.log(friends)
 
-friends.shift()//first element 
-const shifted = friends.shift()
-console.log(friends)
-console.log(shifted)
+// friends.shift()//first element 
+// const shifted = friends.shift()
+// console.log(friends)
+// console.log(shifted)
 
-console.log(friends.indexOf('Steven'))
-console.log(friends.indexOf('Michael'))
+// console.log(friends.indexOf('Steven'))
+// console.log(friends.indexOf('Michael'))
 
-friends.push(23)
-console.log(friends.includes("Steven"))
-console.log(friends.includes("bob"))
-console.log(friends.includes(23))
-console.log(friends)
+// friends.push(23)
+// console.log(friends.includes("Steven"))
+// console.log(friends.includes("bob"))
+// console.log(friends.includes(23))
+// console.log(friends)
 
-if (friends.includes('Steven')) {
-    console.log('You have a friend called Steven')
+// if (friends.includes('Steven')) {
+//     console.log('You have a friend called Steven')
+// }
+
+//Objects 
+const joe = {
+    firstName: 'Joe',
+    lastName: 'Balzac',
+    age: 2037 - 1985,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    location: 'New York City'
 }
+
+console.log(joe.lastName)
+console.log(joe['lastName'])
+
+const nameKey = 'Name'
+console.log(joe['first' + nameKey])
+console.log(joe['last' + nameKey])
+
+const interestedIn =
+    prompt('What do you want to know about Jonas? Choose between firsName, lastName, age, location, job and friends')
+
+if (joe[interestedIn]) {
+    console.log(joe[interestedIn])
+
+} else {
+    console.log("Wrong request! Choose between firsName, lastName, age, location, job and friends")
+}
+
+
+
