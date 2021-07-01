@@ -179,20 +179,20 @@
 // }
 
 //Objects 
-const joe = {
-    firstName: 'Joe',
-    lastName: 'Balzac',
-    age: 2037 - 1985,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven']
-}
+// const joe = {
+//     firstName: 'Joe',
+//     lastName: 'Balzac',
+//     age: 2037 - 1985,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven']
+// }
 
-console.log(joe.lastName)
-console.log(joe['lastName'])
+// console.log(joe.lastName)
+// console.log(joe['lastName'])
 
-const nameKey = 'Name'
-console.log(joe['first' + nameKey])
-console.log(joe['last' + nameKey])
+// const nameKey = 'Name'
+// console.log(joe['first' + nameKey])
+// console.log(joe['last' + nameKey])
 
 // const interestedIn =
 //     prompt('What do you want to know about Jonas? Choose between firsName, lastName, age, location, job and friends')
@@ -205,9 +205,47 @@ console.log(joe['last' + nameKey])
 
 // }
 
-joe.location = 'New York City'
-joe['twitter'] = '@joebalzac'
-console.log(joe)
+// joe.location = 'New York City'
+// joe['twitter'] = '@joebalzac'
+// console.log(joe)
 
-console.log(`${joe.firstName} has ${joe.friends.length} friends and his best friend is ${joe.friends[0]}`)
+// console.log(`${joe.firstName} has ${joe.friends.length} friends and his best friend is ${joe.friends[0]}`)
 
+const joe = {
+    firstName: 'Joe',
+    lastName: 'Balzac',
+    birthYear: 1985,
+    job: 'teacher',
+    friends: ['Michael', 'Peter', 'Steven'],
+    hasDriversLicense: true,
+
+    // calcAge: function (birthYear) {
+    //     return 2037 - birthyear
+    // }
+
+//     calcAge: function(){
+//         console.log(this)
+//         return 2037 - this.birthYear
+//     }
+
+    calcAge: function () {
+        this.age = 2037 - this.birthYear
+        return this.age
+    },
+
+    getSummary: function() {
+        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a': 'no'} driver's license`
+    }
+}
+
+console.log(joe.calcAge())
+
+console.log(joe.age)
+console.log(joe.age)
+console.log(joe.age)
+// console.log(joe['calcAge'](1985))
+
+//Challenge 
+//"Jonas is a 46-year old teacher.and he has a driver's license"
+
+console.log(joe.getSummary())
