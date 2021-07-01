@@ -184,8 +184,7 @@ const joe = {
     lastName: 'Balzac',
     age: 2037 - 1985,
     job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    location: 'New York City'
+    friends: ['Michael', 'Peter', 'Steven']
 }
 
 console.log(joe.lastName)
@@ -195,15 +194,20 @@ const nameKey = 'Name'
 console.log(joe['first' + nameKey])
 console.log(joe['last' + nameKey])
 
-const interestedIn =
-    prompt('What do you want to know about Jonas? Choose between firsName, lastName, age, location, job and friends')
+// const interestedIn =
+//     prompt('What do you want to know about Jonas? Choose between firsName, lastName, age, location, job and friends')
 
-if (joe[interestedIn]) {
-    console.log(joe[interestedIn])
+// if (joe[interestedIn]) {
+//     console.log(joe[interestedIn])
 
-} else {
-    console.log("Wrong request! Choose between firsName, lastName, age, location, job and friends")
-}
+// } else {
+//     console.log("Wrong request! Choose between firsName, lastName, age, job and friends")
 
+// }
 
+joe.location = 'New York City'
+joe['twitter'] = '@joebalzac'
+console.log(joe)
+
+console.log(`${joe.firstName} has ${joe.friends.length} friends and his best friend is ${joe.friends[0]}`)
 
