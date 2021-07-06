@@ -178,7 +178,7 @@
 //     console.log('You have a friend called Steven')
 // }
 
-//Objects 
+//Introduction to Objects 
 // const joe = {
 //     firstName: 'Joe',
 //     lastName: 'Balzac',
@@ -211,13 +211,13 @@
 
 // console.log(`${joe.firstName} has ${joe.friends.length} friends and his best friend is ${joe.friends[0]}`)
 
-const joe = {
-    firstName: 'Joe',
-    lastName: 'Balzac',
-    birthYear: 1985,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+// const joe = {
+//     firstName: 'Joe',
+//     lastName: 'Balzac',
+//     birthYear: 1985,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
 
     // calcAge: function (birthYear) {
     //     return 2037 - birthyear
@@ -228,24 +228,99 @@ const joe = {
 //         return 2037 - this.birthYear
 //     }
 
-    calcAge: function () {
-        this.age = 2037 - this.birthYear
-        return this.age
-    },
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYear
+//         return this.age
+//     },
 
-    getSummary: function() {
-        return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a': 'no'} driver's license`
-    }
-}
+//     getSummary: function() {
+//         return `${this.firstName} is a ${this.calcAge()}-year old ${this.job}, and he has ${this.hasDriversLicense ? 'a': 'no'} driver's license`
+//     }
+// }
 
-console.log(joe.calcAge())
+// // console.log(joe.calcAge())
 
-console.log(joe.age)
-console.log(joe.age)
-console.log(joe.age)
+// console.log(joe.age)
+// console.log(joe.age)
+// console.log(joe.age)
 // console.log(joe['calcAge'](1985))
 
 //Challenge 
 //"Jonas is a 46-year old teacher.and he has a driver's license"
 
-console.log(joe.getSummary())
+// console.log(joe.getSummary())
+
+
+//for loop keeps running while condition is true 
+// for (let rep = 5; rep <= 100; rep++) {
+//     console.log(`Lifting weight repition ${rep}`)
+// }
+
+// const joe = [
+//         'Joe',
+//         'Balzac',
+//         2037 - 1985,
+//        'teacher',
+//         ['Michael', 'Peter', 'Steven'],
+//         true
+// ]
+// const types = []
+
+// for (let i = 0; i < joe.length; i++) {
+//     //Reading from joe array 
+//     console.log(joe[i], typeof joe[i])
+
+//     //Filling types array
+//     // types[i] = typeof joe[i]
+//     types.push(typeof joe[i])
+// }
+
+// console.log(types)
+
+// const years = [1991, 2007, 1969, 2021]
+// const ages = []
+
+// for(let i = 0; i < years.length; i++) {
+//     ages.push(2037 - years[i])
+// }
+
+// console.log(ages)
+
+// //Continue and break 
+// console.log('---ONLY STRINGS--')
+// for (let i = 0; i < joe.length; i++) {
+//     if(typeof joe[i] !== 'string') continue
+
+//     console.log(joe[i], typeof joe[i])
+// }
+
+// console.log('---BREAK WITH NUMBER--')
+// for (let i = 0; i < joe.length; i++) {
+//     if(typeof joe[i] === 'number') break
+
+//     console.log(joe[i], typeof joe[i])
+// }
+
+const joe = [
+        'Joe',
+        'Balzac',
+        2037 - 1985,
+       'teacher',
+        ['Michael', 'Peter', 'Steven']
+]
+
+//Looping backwards
+
+for (i = joe.length - 1; i >= 0; i--){
+    console.log(i, joe[i])
+}
+
+//Loop inside a loop 
+for(let exercise = 1; exercise < 4; exercise++){
+    console.log(`------- Starting exercise ${exercise}`)
+
+
+    for ( let rep = 1; rep < 6; rep++){
+        console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`)
+    }
+}
