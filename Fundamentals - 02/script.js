@@ -301,26 +301,45 @@
 //     console.log(joe[i], typeof joe[i])
 // }
 
-const joe = [
-        'Joe',
-        'Balzac',
-        2037 - 1985,
-       'teacher',
-        ['Michael', 'Peter', 'Steven']
-]
+// const joe = [
+//         'Joe',
+//         'Balzac',
+//         2037 - 1985,
+//        'teacher',
+//         ['Michael', 'Peter', 'Steven']
+// ]
 
-//Looping backwards
+// //Looping backwards
 
-for (i = joe.length - 1; i >= 0; i--){
-    console.log(i, joe[i])
+// for (i = joe.length - 1; i >= 0; i--){
+//     console.log(i, joe[i])
+// }
+
+// //Loop inside a loop 
+// for(let exercise = 1; exercise < 4; exercise++){
+//     console.log(`------- Starting exercise ${exercise}`)
+
+
+//     for ( let rep = 1; rep < 6; rep++){
+//         console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`)
+//     }
+// }
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Lifting weight repition ${rep}`)
+// }
+
+let rep = 1
+while (rep <= 10) {
+    // console.log(`WHILE: Lifting weight repition ${rep}`)
+    rep++
 }
 
-//Loop inside a loop 
-for(let exercise = 1; exercise < 4; exercise++){
-    console.log(`------- Starting exercise ${exercise}`)
+let dice = Math.trunc(Math.random() * 10) + 1
 
 
-    for ( let rep = 1; rep < 6; rep++){
-        console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`)
-    }
+while (dice !== 6) {
+    console.log(`You rolled a ${dice}`)
+    dice = Math.trunc(Math.random() * 6) + 1
+    if (dice === 6) console.log('Loops is about top end...')
 }

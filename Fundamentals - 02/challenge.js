@@ -51,41 +51,67 @@
 //BMI Challenge mass / height ** 2  (mass in kg and height in meter)
 
 
-const mark = {
-    firstName: 'Mark',
-    lastName: 'Miller',
-    mass: 78,
-    height: 1.69,
+// const mark = {
+//     firstName: 'Mark',
+//     lastName: 'Miller',
+//     mass: 78,
+//     height: 1.69,
 
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2
-        return this.bmi
+//     calcBMI: function () {
+//         this.bmi = this.mass / this.height ** 2
+//         return this.bmi
+//     }
+// }
+
+// const john = {
+//     firstName: 'John',
+//     lastName: 'Smith',
+//     mass: 88,
+//     height: 1.69,
+
+//     calcBMI: function () {
+//         this.bmi = this.mass / this.height ** 2
+//         return this.age
+//     }
+// }
+
+// mark.calcBMI() 
+// john.calcBMI()
+// console.log(mark.bmi, john.bmi)
+
+
+// if (mark.bmi > john.bmi) {
+//     console.log(`${mark.firstName} ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName} ${john.lastName}!`)
+// } else if (john.bmi > mark.bmi) {
+//     console.log(`${john.firstName} ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName} ${mark.lastName}!`)
+// } else {
+//     console.log('They both have the same BMI')
+// }
+
+const calcTip = function (bill) {
+    return bill >= 50 && bill >= 300 ? bill * 0.15 : bill * 0.20
+}
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+const tips = []
+const totals = []
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i])
+    tips.push(tip)
+    totals.push(tip + bills[i])
+}
+
+console.log(bills, tips, totals)
+
+const calcAverage = function (arr){
+    let sum = 0
+    for (i = 0; i < arr.length; i++){
+        sum += arr[i]
     }
+    return sum / arr.length
 }
 
-const john = {
-    firstName: 'John',
-    lastName: 'Smith',
-    mass: 88,
-    height: 1.69,
-
-    calcBMI: function () {
-        this.bmi = this.mass / this.height ** 2
-        return this.age
-    }
-}
-
-mark.calcBMI() 
-john.calcBMI()
-console.log(mark.bmi, john.bmi)
-
-
-if (mark.bmi > john.bmi) {
-    console.log(`${mark.firstName} ${mark.lastName} BMI ${mark.bmi} is higher than ${john.firstName} ${john.lastName}!`)
-} else if (john.bmi > mark.bmi) {
-    console.log(`${john.firstName} ${john.lastName} BMI ${john.bmi} is higher than ${mark.firstName} ${mark.lastName}!`)
-} else {
-    console.log('They both have the same BMI')
-}
-
-
+console.log(calcAverage([2, 3, 6]))
+console.log(calcAverage(totals))
+console.log(calcAverage(tips))
