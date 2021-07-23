@@ -89,12 +89,13 @@ btnHold.addEventListener('click', () => {
 
 
   // 2. Check is the player's score is >= 100
-  if (scores[activePlayer] >= 100) {
+  if (scores[activePlayer] >= 20) {
 
       //Finish the game 
-      player0El.classList.add('player--winner')
-      player1El.classList.add('player--winner')
-      diceEl.classList.remove('hidden')
+    
+      document.querySelector(`.player--${activePlayer}`).classList.add('player--winner')
+      document.querySelector(`.player--${activePlayer}`).classList.remove('player--active')
+      diceEl.classList.add('hidden')
       playing = false
   } else {
     switchPlayer()
