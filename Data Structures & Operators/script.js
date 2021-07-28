@@ -1,15 +1,6 @@
 "use strict";
 
-const weekdays = [
-  "Mon",
-  "Tues",
-  "Weds",
-  "Thurs",
-  "Friday",
-  "Saturday",
-  "Sunday",
-];
-
+const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 const openingHours = {
   [weekdays[3]]: {
     open: 12,
@@ -37,7 +28,7 @@ const restaurant = {
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMenu: ["Pizza", "Pasta", "Risotto"],
 
-  openingHours = {},
+  openingHours,
 
   order(starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
@@ -60,22 +51,20 @@ const restaurant = {
   },
 };
 
+///////////////////////////////////////
+// Optional Chaining
 if (restaurant.openingHours && restaurant.openingHours.mon)
   console.log(restaurant.openingHours.mon.open);
-
-//WITHOUT optional chaining
 // console.log(restaurant.openingHours.mon.open);
 
-//WITH optional chaining
-// console.log(restaurant.openingHours.mon?.open);
-// console.log(restaurant.openingHours?.mon?.open);
-
-const days = ["Mon", "Tues", "Weds", "Thurs", "Friday", "Saturday", "Sunday"];
-
+// WITH optional chaining
+console.log(restaurant.openingHours.mon?.open);
+console.log(restaurant.openingHours?.mon?.open);
+// Example
+const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 for (const day of days) {
-  console.log(day);
-  restaurant.openingHours[day];
-  openingHours.mon;
+  const open = restaurant.openingHours[day]?.open ?? "closed";
+  console.log(`On ${day}, we open at ${open}`);
 }
 
 //for of loop//////////////////////////
