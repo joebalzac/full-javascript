@@ -30,7 +30,14 @@ const game = {
     ],
   ],
   score: "4:0",
-  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+  scored: [
+    "Lewandowski",
+    "Bob Marley",
+    "Gnarby",
+    "Lewandowski",
+    "Hummels",
+    "Bob Marley",
+  ],
   date: "Nov 9th, 2037",
   odds: {
     team1: 1.33,
@@ -96,3 +103,33 @@ for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
   console.log(scorers);
 }
+
+// //1.
+// for (const [i, player] of game.scored.entries())
+//   console.log(`Goal ${i + 1}: ${player}`);
+
+// //2.
+// const odds = Object.values(game.odds);
+// let average = 0;
+// for (const odd of odds) average += odd;
+// average /= odds.length;
+// console.log(average);
+
+// //3.
+// for (const [team, odd] of Object.entries(game.odds)) {
+//   const teamStr = team === "x" ? "draw" : `Victory of ${game[team]}`;
+//   console.log(`Odd of ${teamStr} ${odd}`);
+// }
+
+// // //Bonus**
+// const scorers = {};
+// for (const player of game.scored) {
+//   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+//   console.log(scorers);
+// }
+
+// const scorers = {};
+// for (const player of game.scored) {
+//   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+//   console.log(scorers);
+// }

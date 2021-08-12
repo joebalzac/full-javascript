@@ -4,16 +4,16 @@ const weekdays = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
 const openingHours = {
   [weekdays[3]]: {
     open: 12,
-    close: 22,
+    close: 22
   },
   [weekdays[4]]: {
     open: 11,
-    close: 23,
+    close: 23
   },
   [weekdays[5]]: {
     open: 0, // Open 24 hours
-    close: 24,
-  },
+    close: 24
+  }
 };
 
 // Data needed for a later exercise
@@ -48,31 +48,65 @@ const restaurant = {
   orderPizza(mainIngredient, ...otherIngredient) {
     console.log(mainIngredient);
     console.log(otherIngredient);
-  },
+  }
 };
 
-//Property Names
-const properties = Object.keys(openingHours);
-console.log(properties);
+const orderSet = new Set([
+  "Pasta",
+  "Pizza",
+  "Pizza",
+  "Risotto",
+  "Pasta",
+  "Pizza"
+]);
 
-let openStr = `We are open on ${properties.length} days:`;
-for (const day of properties) {
-  openStr += `${day}`;
-}
-console.log(openStr);
+console.log(orderSet);
 
-//Property VALUES
-const values = Object.values(openingHours);
-console.log(values);
+console.log(new Set(orderSet));
 
-//Entire object
-const entries = Object.entries(openingHours);
-// console.log(entries);
+console.log(orderSet.size);
+console.log(orderSet.has("Pizza"));
+console.log(orderSet.has("Bread"));
+orderSet.add("Muffins");
+orderSet.add("Garlic Bread");
+orderSet.delete("Risotto");
+// orderSet.clear()
+console.log(orderSet);
 
-//[key, value]
-for (const [key, { open, close }] of entries) {
-  console.log(`On ${key} we open at ${open} and close at ${close}`);
-}
+for (const order of orderSet) console.log(order);
+
+//Example
+const staff = ["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"];
+const staffUnique = new Set(staff);
+console.log(staffUnique);
+console.log(
+  new Set(["Waiter", "Chef", "Waiter", "Manager", "Chef", "Waiter"]).size
+);
+
+console.log(new Set("josephbalzac").size);
+
+// //Property Names
+// const properties = Object.keys(openingHours);
+// console.log(properties);
+
+// let openStr = `We are open on ${properties.length} days:`;
+// for (const day of properties) {
+//   openStr += `${day}`;
+// }
+// console.log(openStr);
+
+// //Property VALUES
+// const values = Object.values(openingHours);
+// console.log(values);
+
+// //Entire object
+// const entries = Object.entries(openingHours);
+// // console.log(entries);
+
+// //[key, value]
+// for (const [key, { open, close }] of entries) {
+//   console.log(`On ${key} we open at ${open} and close at ${close}`);
+// }
 
 // ///////////////////////////////////////
 // // Optional Chaining
