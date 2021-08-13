@@ -133,3 +133,21 @@ for (const player of game.scored) {
 //   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 //   console.log(scorers);
 // }
+
+const myArray = ["a, b, c, d, e"];
+
+myArray.push("Hello");
+myArray.unshift("Welcome");
+
+console.log(myArray);
+
+function secretVariable() {
+  const private = "super secret code";
+  return function () {
+    return private;
+  };
+}
+
+const getPrivateVariable = secretVariable();
+
+console.log(getPrivateVariable());
